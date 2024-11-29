@@ -1,0 +1,46 @@
+<div class="container letra">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Nos puedes encontrar aqui</h1>
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.0755888094263!2d-70.3219644238911!3d-18.480234994807727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915aa9e21a4406f3%3A0x999cf7d6957988b3!2sCentro%20de%20arica!5e0!3m2!1ses!2scl!4v1730984917641!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div> 
+            
+            <div class="pt-4 pb-3 row justify-content-center">
+                <div class="col-md-6">
+                    <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
+                        <h1 class="text-center">Formulario de contacto</h1>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" id="nombre" class="form-control" formControlName="nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="apellido" class="form-label">Apellido</label>
+                            <input type="text" id="apellido" class="form-control" formControlName="apellido">
+                        </div>
+                        <div class="mb-3">
+                            <label for="gmail" class="form-label">Email</label>
+                            <input type="email" id="gmail" class="form-control" formControlName="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="tlfo" class="form-label">Teléfono</label>
+                            <input type="number" id="tlfo" class="form-control" formControlName="tlfo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea type="text" id="mensaje" class="form-control" formControlName="mensaje"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+                <div class="card mt-4 pb-3" *ngIf="datos_formulario != null">
+                    <div class="card-body">
+                        <p class="card-text h4 b text-primary">
+                            <strong>{{datos_formulario.nombre}} {{datos_formulario.apellido}}, su mensaje fue enviado correctamente</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

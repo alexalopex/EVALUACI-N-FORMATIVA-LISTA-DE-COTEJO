@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark letra">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+      <img src="assets/zarla-compu-space-1x1-2400x2400-20210603-9x3dmk6pq9jgdpm8rwh4.webp" alt="" width="56" height="50">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" style="padding: 5px;">
+          <a class="nav-link active" aria-current="page" routerLink="/"><strong class="h4">Inicio</strong></a>
+        </li>
+        <li class="nav-item" style="padding: 5px;">
+          <a class="nav-link active" routerLink="/ubicanos"><strong class="h4">Ubicanos</strong></a>
+        </li>
+        <li class="nav-item" style="padding: 5px;">
+          <a class="nav-link active" routerLink="/contactanos" tabindex="-1" aria-disabled="true"><strong class="h4">Contactanos</strong></a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<router-outlet />
+
+<app-footer></app-footer>
